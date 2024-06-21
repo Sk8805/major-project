@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav a {
+            color: #242424;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            color: #242424;
+            font-size: 25px;
+            border-bottom: 2px #242424 solid;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .head{
+            font-size: 40px;
+            text-decoration: 3px yellow underline;
+            text-align: center;
+        }
+        .firstline{
+            text-align: center;
+            font-size: 20px;
+            margin-top: -20px;
+            color: #424242;
+        }
+        .table{
+            width: 100%;
+            margin-top: 100px;
+            
+        }
+        th{
+            font-size: 20px;
+            text-align: center;
+            padding: 0.5 rem;
+        }
+        td{
+            font-size: 20px;
+            line-height: 35px;
+            text-align: center;
+            padding: 0.5 rem;
+        }
+        .seo3lite{
+            width: 250px;
+            margin-left: 10px;
+        }
+        .seo3lite:hover{
+            box-shadow: 5px 5px 5px black;
+            width: 280px;
+        }
+        .seo3{
+            width: 300px;
+            margin-left: 450px;
+            margin-top: -200px;
+        }
+        .seo3:hover{
+            box-shadow: 5px 5px 5px black;
+            width: 330px;
+        }
+        .seo3max{
+            width: 290px;
+            margin-left: 910px;
+            margin-top: -200px;
+        }
+        .seo3max:hover{
+            box-shadow: 5px 5px 5px black;
+            width: 320px;
+        }
+        .versus1{
+            margin-left: 350px;
+            font-size: 30px;
+            margin-top: -100px;
+            font-weight: 1000;
+        }
+        .versus2{
+            margin-left: 820px;
+            font-size: 30px;
+            margin-top: -100px;
+            font-weight: 1000;
+        }
+        .footer{
+            border-top: 2px solid; 
+            margin-top: 1000px;
+            height: 150px;
+            background-color: #252525;
+        }
+        .foot{
+            font-size: 14px;
+            color: black;
+            line-height: 50px;
+            margin-left: 20px;
+            color: white;
+            opacity: 0.5;
+            text-decoration:  #252525 underline;
+        }
+        .foot:hover{
+            opacity: 1;
+        }
+        .logo2{
+            width: 100px;
+            margin-left: -1150px;
+            margin-top: -100px;
+            animation-name: logo;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+        .logo2:hover{
+            width: 120px
+        }
+        @keyframes logo{
+            from{scale:0;}
+            to{scale:1;}
+        }
+        .Vehicle1{
+            margin-left: 500px;
+            text-decoration: white underline;
+            font-weight: 600;
+            color: black;
+            opacity: 0.6;
+        }
+        .Vehicle1:hover{
+            opacity: 1;
+            font-size: 20px;
+        }
+        .Vehicle2{
+            margin-left: 30px;
+            text-decoration: white underline;
+            font-weight: 600;
+            color: black;
+            opacity: 0.6;
+        }
+        .Vehicle2:hover{
+            opacity: 1;
+            font-size: 20px;
+        }
+        .Vehicle3{
+            margin-left: 30px;
+            text-decoration: white underline;
+            font-weight: 600;
+            color: black;
+            opacity: 0.6;
+        }
+        .Vehicle3:hover{
+            opacity: 1;
+            font-size: 20px;
+        }
+        .buy1{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 100px;
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 110px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .buy2{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 570px;
+            margin-top: -20px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 110px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .buy3{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 1020px;
+            margin-top: -20px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 110px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .buy1:hover{
+            opacity: 1;
+            width: 120px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+        .buy2:hover{
+            opacity: 1;
+            width: 120px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+        .buy3:hover{
+            opacity: 1;
+            width: 120px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+        .prebook1{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 95px;
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 120px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .prebook2{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 565px;
+            margin-top: -20px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 120px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .prebook3{
+            display: block;
+            color: #242424;
+            text-decoration: 2px underline #FFFFFF;
+            margin-left: 1015px;
+            margin-top: -20px;
+            font-weight: 600;
+            font-size: 20px;
+            border: 1px #242424 solid;
+            width: 120px;
+            text-align: center;
+            border-radius: 50px;
+            opacity: 0.7;
+        }
+        .prebook1:hover,prebook2:hover,prebook3:hover{
+            opacity: 1;
+            width: 125px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+        .prebook2:hover{
+            opacity: 1;
+            width: 125px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+        .prebook3:hover{
+            opacity: 1;
+            width: 125px;
+            box-shadow: 2px 2px 2px 2px #424242;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="Untitled-21.html">Home</a></li>
+            <li><a href="Untitled-21(2).html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Untitled-21(4).html" class="dropbtn" target="_blank">Products</a>
+                <div class="dropdown-content">
+                    <a href="Untitled-21(4)(2).html" target="_blank">SE03 Lite</a>
+                    <a href="Untitled-21(4)(1).html" target="_blank">SE03</a>
+                    <a href="Untitled-21(4)(3).html" target="_blank">SE03 Max</a>
+                    <a href="Untitled-21(4)(4).html" target="_blank">Compare All</a>
+                </div>
+            </li>
+            <li><a href="Untitled-21(3).html">Contact Us</a></li>
+            <li><a href="Untitled-pre book.html" target="_blank">Pre-book Now</a></li>
+            <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+            &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </nav>
+    <center><img src="Rhyno.png" class="logo2"></center>
+    <div>
+        <a href="Untitled-21(4)(2).html" class="Vehicle1">SE03 Lite</a></center>
+        <a href="Untitled-21(4)(1).html" class="Vehicle2">SEO3</a></center>
+        <a href="Untitled-21(4)(3).html" class="Vehicle3">SEO3 Max</a></center>
+    </div>
+    <h1 class="head">
+        Comparision Table
+    </h1>
+    <p class="firstline">
+        SEO3 Lite VS SEO3 VS SEO3 Max
+    </p>
+    <div>
+        <div class="vehicle1">
+            <img src="SEO3 lite.png" class="seo3lite">
+        </div>
+        <p class="versus1">
+            VS
+        </p>
+        <div class="vehicle2">
+            <img src="SEO3.png" class="seo3">
+        </div>
+        <p class="versus2">
+            VS
+        </p>
+        <div class="vehicle3">
+            <img src="SEO3 max.png" class="seo3max">
+        </div>
+        <a href="Untitled-21(4)(2).html" class="buy1" target="_blank">BUY NOW</a>
+        <a href="Untitled-21(4)(1).html" class="buy2" target="_blank">BUY NOW</a>
+        <a href="Untitled-21(4)(3).html" class="buy3" target="_blank">BUY NOW</a>
+        <a href="Untitled-pre book.html" class="prebook1" target="_blank">PRE-BOOK</a>
+        <a href="Untitled-pre book.html" class="prebook2" target="_blank">PRE-BOOK</a>
+        <a href="Untitled-pre book.html" class="prebook3" target="_blank">PRE-BOOK</a>
+    </div>
+    <center><table class="table">
+        <tr>
+            <th>Specification</th>
+            <th>Rhyno SEO3 Lite</th>
+            <th>Rhyno SEO3</th>
+            <th>Rhyno SEO3 Max</th>
+        </tr>
+        <tr>
+            <td>Battery</td>
+            <td>1.8 kwh</td>
+            <td>2.7 kwh</td>
+            <td>2.7 kwh</td>
+        </tr>
+        <tr>
+            <td>Battery features</td>
+            <td>LFP with
+                1500 cycles,
+                Active
+                Balancing,<br>
+                Waterproof
+                (IP67)
+            </td>
+            <td>LFP with 1500
+                cycles,
+                Active
+                Balancing,<br>
+                Waterproof
+                (IP67)
+            </td>
+            <td>LFP with 1500
+                cycles,
+                Active Balancing,<br>
+                Waterproof
+                (IP67)
+            </td>
+        </tr>
+        <tr>
+            <td>Battery warranty</td>
+            <td>3 years</td>
+            <td>3 years</td>
+            <td>3 years</td>
+        </tr>
+        <tr>
+            <td>Chargin time</td>
+            <td>3 hours(12A)</td>
+            <td>4 hours(12A)</td>
+            <td>4 hours(12A)</td>
+        </tr>
+        <tr>
+            <td>Motor</td>
+            <td>1500W</td>
+            <td>1500W</td>
+            <td>2000W</td>
+        </tr>
+        <tr>
+            <td>Max speed</td>
+            <td>55 km/h</td>
+            <td>55 km/h</td>
+            <td>65 km/h</td>
+        </tr>
+        <tr>
+            <td>Warranty on electronics</td>
+            <td>1 year</td>
+            <td>1 year</td>
+            <td>1 year</td>
+        </tr>
+        <tr>
+            <td>Max range(@30km/h)</td>
+            <td>100 km</td>
+            <td>150 km</td>
+            <td>120 km</td>
+        </tr>
+        <tr>
+            <td>Max range(@45km/h)</td>
+            <td>90 km</td>
+            <td>110 km</td>
+            <td>100 km</td>
+        </tr>
+        <tr>
+            <td>Max range(@full speed)</td>
+            <td>60 km</td>
+            <td>90 km</td>
+            <td>80 km</td>
+        </tr>
+        <tr>
+            <td>Other key benefits</td>
+            <td>Fire-safe
+                Battery,
+                Range
+                prediction,<br>
+                Comfortable
+                ride,
+                Stable and
+                safe</td>
+            <td>Fire-safe
+                Battery,
+                Range
+                prediction,<br>
+                Comfortable
+                ride,
+                Stable and
+                safe</td>
+            <td>Fire-safe
+                Battery,
+                Range
+                prediction,<br>
+                Comfortable
+                ride,
+                Stable and
+                safe</td>
+        </tr>
+    </table></center>
+    <center><div class="footer">
+        <a href="" class="foot">Privacy Policy</a><a class="foot">|</a>
+        <a href="Untitled-21(3).html" class="foot">Contact us</a><a class="foot">|</a>
+        <a href="Untitled-21(4).html" class="foot">Products</a><a class="foot">|</a>
+        <a href="https://www.linkedin.com/company/rhyno-wheels/"target="_blank" class="foot">Career</a><a class="foot">|</a>
+        <a href="" class="foot">Refund Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Website Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Rentals</a>
+        <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+        &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </div></center>
+</body>
+</html>

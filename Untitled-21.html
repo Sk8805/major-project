@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav a {
+            color: #242424;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            color: #242424;
+            font-size: 25px;
+            border-bottom: 2px #242424 solid;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .logo{
+            width: 450px;
+        }
+        .logo:hover{
+            width: 500px;
+        }
+        .moving{
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        .footer{
+            border-top: 2px solid; 
+            margin-top: 1000px;
+            height: 150px;
+            background-color: #252525;
+        }
+        .foot{
+            font-size: 14px;
+            color: black;
+            line-height: 50px;
+            margin-left: 20px;
+            color: white;
+            opacity: 0.5;
+            text-decoration:  #252525 underline;
+        }
+        .foot:hover{
+            opacity: 1;
+        }
+
+        #slideshow {
+            overflow: hidden;
+            height: 450px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .slide {
+            float: left;
+            height: 450px;
+            width: 1200px;
+        }
+        
+        .slide-wrapper {
+            
+            width: calc(1200px * 5);
+            animation: slide 60s infinite;
+        }
+        
+        .slide:nth-child(1) {
+            background: white;
+        }
+        
+        .slide:nth-child(2) {
+            background: white;
+        }
+        
+        .slide:nth-child(3) {
+            background: white;
+        }
+        
+        .slide:nth-child(4) {
+            background: white;
+        }
+        .slide:nth-child(5) {
+            background: white;
+        }
+        
+        @keyframes slide {
+            20% {
+            margin-left: 0px;
+            }
+            30% {
+                margin-left: calc(-1200px * 1);
+            }
+            50% {
+                margin-left: calc(-1200px * 2);
+            }
+            70% {
+                margin-left: calc(-1200px * 3);
+            }
+            90%{
+                margin-left: calc(-1200px * 4);
+            }
+        }
+        p{
+            font-size: 25px;
+        }
+        .body2{
+            padding-top: 200px;
+            text-align: center;
+        }
+        h1{
+            text-decoration: 2px black underline overline;
+        }
+        .vehicles{
+            width: 900px;
+        }
+        .slogan1{
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .slogan2{
+            margin-top: -20px;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="Untitled-21.html">Home</a></li>
+            <li><a href="Untitled-21(2).html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Untitled-21(4).html" class="dropbtn" target="_blank">Products</a>
+                <div class="dropdown-content">
+                    <a href="Untitled-21(4)(2).html" target="_blank">SE03 Lite</a>
+                    <a href="Untitled-21(4)(1).html" target="_blank">SE03</a>
+                    <a href="Untitled-21(4)(3).html" target="_blank">SE03 Max</a>
+                    <a href="Untitled-21(4)(4).html" target="_blank">Compare All</a>
+                </div>
+            </li>
+            <li><a href="Untitled-21(3).html">Contact Us</a></li>
+            <li><a href="Untitled-pre book.html" target="_blank">Pre-book Now</a></li>
+            <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+            &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </nav>
+    <br><center><img src="Rhyno logo(4).png" class="logo"></center>
+    <marquee bgcolor="yellow" class="moving">Let's Elevate Your Ride Experience With Rhyno – Where Superiority Meets Style, Elegance, Minimalism, Comfort</marquee>
+    <center><p class="slogan1">Imagine | Initiate | Inspire</p></center>
+    <center><p class="slogan2">Discover the ultimate combination of style and performance</p></center>
+    <center><img src="EV's.png" class="vehicles"></center>
+    <div id="slideshow" class="body2">
+        <div class="slide-wrapper">
+            <div class="slide">
+                <h1 class="slide-number">
+                    LFP Battery
+                </h1>
+                <p>
+                    Rhyno is equipped with Lithium Iron Phosphate (LFP) batteries,
+renowned for their safety features—eliminating the risk of fire associated with other
+Lithium batteries. These batteries boast a broader temperature range, ideal for the
+diverse Indian climate. Our technology enhances Rhyno's longevity, complemented
+by an Active Balancing Smart Battery Management System (BMS) for extended life
+and reduced maintenance. Each battery undergoes rigorous waterproofing tests
+according to IP76 standards. But it doesn't stop there—our technology goes the extra
+mile in ensuring the battery's lasting durability. Connect with us to discover the
+thoughtful engineering behind our batteries!
+                </p>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    Wider tyres
+                </h1> 
+                <p>
+                    Now, say goodbye to skidding and embrace the leaning turns!
+Featuring first-of-its-kind, 9.5-inch wider tyres that make this machine an enormous
+beast that ensures stability on different terrains such as wet roads, mud, and sand.
+                </p>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    Range prediction
+                </h1>
+                <p>
+                    Many budget-friendly electric scooters overlook this crucial
+feature, causing riders to experience range anxiety. With Rhyno, you can ride with
+peace of mind, thanks to the scooter providing precise information about the
+remaining battery.
+                </p>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    Extraordinery Experience
+                </h1> 
+                <p>
+                    Rhyno is more than just a mode of transportation. It is
+an experience of sheer comfort and style! A seamless fusion of minimalism,
+sophistication, and a touch of masculinity!
+                </p>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    Rugged and simple Design
+                </h1>
+                <p>
+                    We’ve had enough of the EVs looking and feeling like
+fragile plastic toys. Often fading out and shamelessly breaking in minor accidents,
+ending up spending weeks and months at service stations for complex repairs. We
+took a bold step of making something raw, rugged, and practical. We kept it so
+simple that even your trusted local mechanic can understand and repair most of it. If
+you have reached this far, why not to take a test ride? Click here to locate your
+nearest dealership or book a test ride at your home!
+                </p>
+            </div>
+        </div>
+    </div>
+    <center><div class="footer">
+        <a href="" class="foot">Privacy Policy</a><a class="foot">|</a>
+        <a href="Untitled-21(3).html" class="foot">Contact us</a><a class="foot">|</a>
+        <a href="Untitled-21(4).html" class="foot">Products</a><a class="foot">|</a>
+        <a href="https://www.linkedin.com/company/rhyno-wheels/"target="_blank" class="foot">Career</a><a class="foot">|</a>
+        <a href="" class="foot">Refund Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Website Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Rentals</a>
+        <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+        &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </div></center>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav a {
+            color: #242424;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            color: #242424;
+            font-size: 25px;
+            border-bottom: 2px #242424 solid;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .head{
+            text-align: center;
+            margin-top: 100px;
+            text-decoration: 3px underline yellow;
+            font-size: 40px;
+        }
+        .body{
+            text-align: center;
+            font-size: 30px;
+            margin-top: -300px;
+        }
+        .logo{
+            width: 800px;
+            margin-top: 80px;
+            opacity: 0.2;
+        }
+        .footer{
+            border-top: 2px solid; 
+            margin-top: 1000px;
+            height: 150px;
+            background-color: #252525;
+        }
+        .foot{
+            font-size: 14px;
+            color: black;
+            line-height: 50px;
+            margin-left: 20px;
+            color: white;
+            opacity: 0.5;
+            text-decoration:  #252525 underline;
+        }
+        .foot:hover{
+            opacity: 1;
+        }
+        .logo2{
+            width: 100px;
+            margin-left: -1150px;
+            margin-top: -100px;
+            animation-name: logo;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+        .logo2:hover{
+            width: 120px
+        }
+        @keyframes logo{
+            from{scale:0;}
+            to{scale:1;}
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="Untitled-21.html">Home</a></li>
+            <li><a href="Untitled-21(2).html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Untitled-21(4).html" class="dropbtn" target="_blank">Products</a>
+                <div class="dropdown-content">
+                    <a href="Untitled-21(4)(2).html" target="_blank">SE03 Lite</a>
+                    <a href="Untitled-21(4)(1).html" target="_blank">SE03</a>
+                    <a href="Untitled-21(4)(3).html" target="_blank">SE03 Max</a>
+                    <a href="Untitled-21(4)(4).html" target="_blank">Compare All</a>
+                </div>
+            </li>
+            <li><a href="Untitled-21(3).html">Contact Us</a></li>
+            <li><a href="Untitled-pre book.html" target="_blank">Pre-book Now</a></li>
+            <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+            &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </nav>
+    <center><img src="Rhyno.png" class="logo2"></center>
+    <h1 class="head">
+        Contact us
+    </h1>
+    <div>
+        <center><img src="Rhyno.png" class="logo"></center>
+        <div>
+            <p class="body">
+                <br>● Mail: info@rhyno.in
+                <br>● Mobile no.: +91-9023987528
+                <br>● Location: Rhyno Wheels Private limited, Near UG hostel gate #2, Behind PDEU,
+                    Raisan, Gandhinagar, Gujarat, India.
+            </p>
+        </div>
+    </div>
+    <center><div class="footer">
+        <a href="" class="foot">Privacy Policy</a><a class="foot">|</a>
+        <a href="Untitled-21(3).html" class="foot">Contact us</a><a class="foot">|</a>
+        <a href="Untitled-21(4).html" class="foot">Products</a><a class="foot">|</a>
+        <a href="https://www.linkedin.com/company/rhyno-wheels/"target="_blank" class="foot">Career</a><a class="foot">|</a>
+        <a href="" class="foot">Refund Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Website Policy</a><a class="foot">|</a>
+        <a href="" class="foot">Rentals</a>
+        <br><a href="https://www.instagram.com/rhyno.in/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ce1254;"></i></a>
+        &nbsp;<a href="https://www.linkedin.com/company/rhyno-wheels/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #0887e7;"></i></a>
+    </div></center>
+</body>
+</html>
